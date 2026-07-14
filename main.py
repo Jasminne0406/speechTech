@@ -61,18 +61,18 @@ async def load_models():
     # ASR_REPO = "./models/khmer-wav2vec-bert"
     # TTS_REPO = "./models/khmer-vits"
 
-    ASR_REPO = "Prakmlis/w2v-bert-2.0-khmer"
+    ASR_REPO = "Prakmlis/w2v-bert-2.0-khmer-customize-data-final"
     TTS_REPO = "Prakmlis/khmer-vits-mms"
 
     TTS_CHECKPOINT = (
         "vits_khmer/"
-        "vits_khmer-February-25-2026_02+27AM-0000000/"
+        "vits_khmer-July-14-2026_02+08AM-0000000/"
         "best_model.pth"
     )
 
     TTS_CONFIG = (
         "vits_khmer/"
-        "vits_khmer-February-25-2026_02+27AM-0000000/"
+        "vits_khmer-July-14-2026_02+08AM-0000000/"
         "config.json"
     )
 
@@ -98,7 +98,7 @@ async def load_models():
         use_cuda=use_cuda
     )
 
-    synth.tts_model.length_scale = 1.10
+    synth.tts_model.length_scale = 0.90
     synth.tts_model.noise_scale = 0.3
     synth.tts_model.inference_noise_scale = 0.3
     synth.tts_model.noise_scale_dp = 0.55
